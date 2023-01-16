@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Kart Leaderboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-container">
+    <h1>Mario Kart Leaderboard</h1>
+  </div>
+<div class="row">
+  <div class="new-entry col-lg-6">
+    <h2>Add New Record</h2>
+    <table cellspacing="10">
+      <form action="" method="post">
+      <tr>
+        <td>
+          <label>Your Name</label>
+        </td>
+        <td>
+          <label>Map</label>
+        </td>
+        <td>
+          <label>Time</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" name="yourName">
+        </td>
+        <td>
+          <!-- This is just a placeholder until we create the database which will draw this information -->
+          <input list="maps" name="Map">
+          <datalist  id="maps">
+            <option value="Mushroom Gorge"></option> 
+        </td>
+        <td>
+          <input type="text" name="Time">
+        </td>
+      </tr>
+    </table>
+    <input class="btn" type="submit">
+  </form>
+</div>
+
+    <div class="current-leaderboard col-lg-6">
+      <h2>Leaderboard</h2>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

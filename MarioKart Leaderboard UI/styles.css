@@ -1,0 +1,50 @@
+/**************************TAG SELECTORS**************************/
+body {
+  background-color: #151515;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  color: #FFFFFF;
+  overflow: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+/**************************CONTAINERS/CONTAINERS WITH SHARED PROPERTIES **************************/
+.new-entry,.current-leaderboard {
+  background-color: #ffffff;
+  color: #151515;
+  padding: 50px 0;
+}
+
+
+.top-container {
+  /* background-color: #40DFEF; */
+  position: relative;
+  padding: 50px 0;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  
+}
+.col-lg-6 {
+  flex: 0 0 auto;
+  width: 50%;
+  
+}
+
+/**************************BUTTONS**************************/
+
+/**************************ADJUSTING FOR SCREENSIZES**************************/
