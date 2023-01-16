@@ -1,7 +1,7 @@
 # mariokart-leaderboard
 Collaborate & create a digital leaderboard available to use for adding and viewing Mario Kart maps race times.
 
-====
+##
 Decision tree
 
 https://miro.com/app/board/uXjVPycaWsU=/!
