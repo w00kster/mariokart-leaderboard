@@ -35,7 +35,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
+          # Upload specific directory
           path: 'MarioKart Leaderboard UI'
       - name: Deploy to GitHub Pages
         id: deployment
