@@ -6,6 +6,7 @@ CREATE TABLE Leaderboard (
     Lap1Time TIME NOT NULL,
     Lap2Time TIME NOT NULL,
     Lap3Time TIME NOT NULL,
+    CreatedDate DATETIME,
     FOREIGN KEY (MapID) REFERENCES Maps(MapID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
@@ -14,7 +15,6 @@ CREATE TABLE Cups (
     CupID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(255) NOT NULL,
     Description TEXT,
-    Date DATE
 );
 
 CREATE TABLE Maps (
