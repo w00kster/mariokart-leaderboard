@@ -11,8 +11,8 @@
   <div class="top-container">
     <h1>Mario Kart Leaderboard</h1>
   </div>
-<div class="row">
-  <div class="new-entry col-lg-6">
+<div>
+  <div class="new-entry">
     <h2>Add New Record</h2>
     <table cellspacing="10">
       <form action="" method="post">
@@ -24,7 +24,16 @@
           <label>Map</label>
         </td>
         <td>
-          <label>Time</label>
+          <label>Lap 1</label>
+        </td>
+        <td>
+          <label>Lap 2</label>
+        </td>
+        <td>
+          <label>Lap 3</label>
+        </td>
+        <td>
+          <label>Total Time</label>
         </td>
       </tr>
       <tr>
@@ -37,8 +46,18 @@
           <datalist  id="maps">
             <option value="Mushroom Gorge"></option> 
         </td>
+        <!-- Need to update data types to time once i can figure out how to get mm:ss:sss and fix up the function -->
         <td>
-          <input type="text" name="Time">
+          <input type="text" name="Time" onblur="findTotal()"  class="lapTime">
+        </td>
+        <td>
+          <input type="text" name="Time" onblur="findTotal()"  class="lapTime">
+        </td>
+        <td>
+          <input type="text" name="Time" onblur="findTotal()"  class="lapTime">
+        </td>
+        <td>
+          <input type="text" id="total" readonly/>
         </td>
       </tr>
     </table>
@@ -46,7 +65,7 @@
   </form>
 </div>
 
-    <div class="current-leaderboard col-lg-6">
+    <div class="current-leaderboard">
       <h2>Leaderboard</h2>
     </div>
   </div>
