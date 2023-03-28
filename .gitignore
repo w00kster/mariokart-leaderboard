@@ -2,3 +2,7 @@ provider.tf
 *.terraform*
 *.tfstate*
 .vscode
+node_modules
+package-lock.json
+package.json
+.env
