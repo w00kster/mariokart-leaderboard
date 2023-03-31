@@ -1,5 +1,4 @@
 const mysql = require('mysql2');
-const fs = require('fs');
 const dotenv = require('dotenv').config();
 
 const connection = mysql.createConnection({
@@ -8,7 +7,8 @@ const connection = mysql.createConnection({
   password: process.env.password,
   database: process.env.database,
   ssl: {
-    ca: fs.readFileSync('./mariokart-leaderboard-ca-certificate.crt')
+    ca: process.env.ssl,
+    rejectUnauthorized: false
   }
 });
 
