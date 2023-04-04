@@ -2,7 +2,7 @@ We want to design a single interface for users to interact with the database and
 
 Requirements:
 
-- Install npm (local device specific)
+- Install npm (local device specific).
 
 STEPS TO CONNECT MYSQL DATABASE TO HTML FORM:
 - Open command line and navigate to the MarioKart Leaderboard UI folder on your local machine
