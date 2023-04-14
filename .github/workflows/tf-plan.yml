@@ -1,4 +1,4 @@
-name: Create terraform plan
+name: Terraform plan
 
 on: [pull_request]
 
@@ -9,7 +9,7 @@ permissions:
 jobs:
   plan:
     runs-on: ubuntu-latest
-    name: Create a plan for an example terraform configuration
+    name: Terraform plan MySQL infrastructure
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       TF_VAR_linode_token: ${{ secrets.LINODE_TOKEN_2023_04 }}
