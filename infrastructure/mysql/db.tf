@@ -1,9 +1,4 @@
-resource "linode_database_mysql" "mydatabase" {
-  label     = "mydatabase"
-  engine_id = "mysql/8.0.26"
-  region    = "ap-southeast"
-  type      = "g6-nanode-1"
-}
+
 
 resource "linode_database_mysql" "mariokart-leaderboard" {
   label          = "mariokart-leaderboard"
