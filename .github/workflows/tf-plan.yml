@@ -12,6 +12,7 @@ jobs:
     name: Create a plan for an example terraform configuration
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      TF_VAR_linode_token: ${{ secrets.LINODE_TOKEN_2023_04 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
