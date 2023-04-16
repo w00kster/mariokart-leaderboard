@@ -22,7 +22,7 @@ jobs:
         run: |
           echo "Test variables"
           echo "This is the TF_VAR_linode_token: $TF_VAR_linode_token"
-    steps:
+
       - name: Checkout
         uses: actions/checkout@v3
 
