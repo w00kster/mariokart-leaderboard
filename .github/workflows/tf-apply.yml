@@ -17,6 +17,12 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       TF_VAR_linode_token: ${{ secrets.LINODE_TOKEN_2023_04 }}
     steps:
+      - name: Run test with various variables
+        if: ${{ env.TF_VAR_linode_token }}
+        run: |
+          echo "Test variables"
+          echo "This is the TF_VAR_linode_token: $TF_VAR_linode_token"
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
 
