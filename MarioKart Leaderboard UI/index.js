@@ -8,3 +8,10 @@ function findTotal(){
   }
   document.getElementById('total').value = tot;
 }
+
+$(document).ready(function(){
+  $('.carousel').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1
+  });
+});
