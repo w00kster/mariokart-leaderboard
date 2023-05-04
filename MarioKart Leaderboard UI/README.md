@@ -3,6 +3,15 @@ We want to design a single interface for users to interact with the database and
 Requirements:
 
 - Install npm (local device specific).
+  - npm packages:
+    - mysql2
+    - dotenv
+    - slick-carousel 
+      - `npm install slick-carousel`
+    - grid 
+      - `npm install grid`
+    - jquery 
+      - `npm install jquery`
 
 STEPS TO CONNECT MYSQL DATABASE TO HTML FORM:
 - Open command line and navigate to the MarioKart Leaderboard UI folder on your local machine
