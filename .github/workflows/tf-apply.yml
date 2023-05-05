@@ -12,6 +12,7 @@ permissions:
 jobs:
   apply:
     runs-on: ubuntu-latest
+    environment: linode
     name: Terraform apply MySQL infrastructure
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
