@@ -1,5 +1,5 @@
 resource "linode_database_mysql" "mariokart-leaderboard" {
-  label          = "mariokart-leaderboard"
+  label          = "mariokart-leaderboard-${formatdate("YYYY-MM", timestamp())}"
   engine_id      = "mysql/8.0.30"
   region         = "ap-southeast"
   type           = "g6-nanode-1"
