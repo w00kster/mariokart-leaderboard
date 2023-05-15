@@ -12,7 +12,7 @@ permissions:
 
 env:
 #  TF_VAR_component_version: "1.0.${{ github.run_number }}"
-  TF_VAR_linode_token: ${{ secrets.LINODE_TOKEN_2023_04 }}
+  TF_VAR_linode_token: ${{ secrets.LINODE_2023_05 }}
 
 jobs:
   deploy:
