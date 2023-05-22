@@ -1,4 +1,35 @@
-/**************************TAG SELECTORS**************************/
+/* CSS Reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+/* *, *:before, *:after {
+  box-sizing: inherit;
+} */
+ h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Global Styles */
 body {
   background-color: #151515;
   font-family: Arial, Helvetica, sans-serif;
@@ -6,45 +37,45 @@ body {
   text-align: center;
   margin: 0;
   color: #FFFFFF;
-  overflow: auto;
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
-table {
-  margin-left: auto;
-  margin-right: auto;
-}
-/**************************CONTAINERS/CONTAINERS WITH SHARED PROPERTIES **************************/
-.new-entry,.current-leaderboard {
+
+/* Components */
+/* Header */
+
+/* Carousel */
+
+/* Entry Form */
+.new-entry {
   background-color: #ffffff;
   color: #151515;
-  padding: 50px 0;
+  padding: 50px;
+}
+.new-entry form {
+  max-width: 100vw;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 100vw;
+}
+
+ .column {
+  flex: 1;
+}
+ /* LeaderBoard */
+.current-leaderboard {
+  background-color: #ffffff;
+  color: #151515;
+  /* padding: 50px; */
+  width: 100%;
 }
 
 
 .top-container {
-  /* background-color: #40DFEF; */
   position: relative;
-  padding: 50px 0;
 }
 
-.row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
-  
-}
-.col-lg-6 {
-  flex: 0 0 auto;
-  width: 50%;
-  
-}
 
 /**************************BUTTONS**************************/
 
-/**************************ADJUSTING FOR SCREENSIZES**************************/

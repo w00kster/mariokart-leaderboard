@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mario Kart Leaderboard</title>
+    <link rel="stylesheet" href="styles.css" />
     <!-- Add the slick-theme.css if you want default styling -->
     <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="styles.css" />
+
   </head>
   <body>
     <header class="top-container">
@@ -30,67 +31,46 @@
     <section class="new-entry">
       <h2>Add New Record</h2>
       <form action="connect.js" method="post">
-        <table cellspacing="10">
-          <tr>
-            <td>
-              <label for="your-name">Your Name</label>
-            </td>
-            <td>
-              <label for="map">Map</label>
-            </td>
-            <td>
-              <label for="lap1">Lap 1</label>
-            </td>
-            <td>
-              <label for="lap2">Lap 2</label>
-            </td>
-            <td>
-              <label for="lap3">Lap 3</label>
-            </td>
-            <td>
-              <label for="total-time">Total Time</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <input id="your-name" type="text" name="yourName" />
-            </td>
-            <td>
+        <span class="row">
+              <label for="your-name" class="column">Your Name</label>
+
+              <label for="map" class="column">Map</label>
+
+              <label for="lap1" class="column">Lap 1</label>
+
+              <label for="lap2" class="column">Lap 2</label>
+
+              <label for="lap3" class="column">Lap 3</label>
+
+              <label for="total-time" class="column">Total Time</label>
+            </span>
+            <span class="row">
+              <input id="your-name" type="text" name="yourName" class="column" />
               <!-- This is just a placeholder until we create the database which will draw this information -->
-              <select name="map" id="map">
+              <select name="map" id="map" class="column">
                 <option value="Mushroom Gorge">Mushroom Gorge</option>
               </select>
-            </td>
             <!-- Need to update data types to time once i can figure out how to get mm:ss:sss and fix up the function -->
-            <td>
               <input
                 id="lap1"
                 type="text"
                 name="Time"
                 onblur="findTotal()"
-                class="lapTime" />
-            </td>
-            <td>
+                class="lapTime column" />
               <input
                 id="lap2"
                 type="text"
                 name="Time"
                 onblur="findTotal()"
-                class="lapTime" />
-            </td>
-            <td>
+                class="lapTime column" />
               <input
                 id="lap3"
                 type="text"
                 name="Time"
                 onblur="findTotal()"
-                class="lapTime" />
-            </td>
-            <td>
-              <input id="total-time" type="text" id="total" readonly />
-            </td>
-          </tr>
-        </table>
+                class="lapTime column" />
+              <input class="column" type="text" id="total" readonly />
+            </span>
         <input class="btn" type="submit" />
       </form>
     </section>
