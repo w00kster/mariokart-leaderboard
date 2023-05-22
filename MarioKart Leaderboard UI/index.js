@@ -9,9 +9,10 @@ function findTotal(){
   document.getElementById('total').value = tot;
 }
 
-$(document).ready(function(){
+document.addEventListener("DOMContentLoaded", function(){
   $('.carousel').slick({
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    arrows: true
   });
 });
