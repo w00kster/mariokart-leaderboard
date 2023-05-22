@@ -1,85 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mario Kart Leaderboard</title>
-  <!-- Add the slick-theme.css if you want default styling -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="top-container">
-    <h1>Mario Kart Leaderboard</h1>
-  </div>
-  <div class="carousel">
-    <div><h3>1</h3></div>
-    <div><h3>2</h3></div>
-    <div><h3>3</h3></div>
-    <div><h3>4</h3></div>
-    <div><h3>5</h3></div>
-    <div><h3>6</h3></div>
-  </div>
-<div>
-  <div class="new-entry">
-    <h2>Add New Record</h2>
-    <table cellspacing="10">
-      <form action="" method="post">
-      <tr>
-        <td>
-          <label>Your Name</label>
-        </td>
-        <td>
-          <label>Map</label>
-        </td>
-        <td>
-          <label>Lap 1</label>
-        </td>
-        <td>
-          <label>Lap 2</label>
-        </td>
-        <td>
-          <label>Lap 3</label>
-        </td>
-        <td>
-          <label>Total Time</label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <input type="text" name="yourName">
-        </td>
-        <td>
-          <!-- This is just a placeholder until we create the database which will draw this information -->
-          <input list="maps" name="Map">
-          <datalist  id="maps">
-            <option value="Mushroom Gorge"></option> 
-        </td>
-        <!-- Need to update data types to time once i can figure out how to get mm:ss:sss and fix up the function -->
-        <td>
-          <input type="text" name="Time" onblur="findTotal()"  class="lapTime">
-        </td>
-        <td>
-          <input type="text" name="Time" onblur="findTotal()"  class="lapTime">
-        </td>
-        <td>
-          <input type="text" name="Time" onblur="findTotal()"  class="lapTime">
-        </td>
-        <td>
-          <input type="text" id="total" readonly/>
-        </td>
-      </tr>
-    </table>
-    <input class="btn" type="submit">
-  </form>
-</div>
-    <div class="current-leaderboard">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mario Kart Leaderboard</title>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-container">
+      <h1>Mario Kart Leaderboard</h1>
+    </header>
+    <section class="carousel">
+
+
+      <div><h3>1</h3></div>
+      <div><h3>2</h3></div>
+      <div><h3>3</h3></div>
+      <div><h3>4</h3></div>
+      <div><h3>5</h3></div>
+      <div><h3>6</h3></div>
+
+    </section>
+    <section class="new-entry">
+      <h2>Add New Record</h2>
+      <form action="connect.js" method="post">
+        <table cellspacing="10">
+          <tr>
+            <td>
+              <label for="your-name">Your Name</label>
+            </td>
+            <td>
+              <label for="map">Map</label>
+            </td>
+            <td>
+              <label for="lap1">Lap 1</label>
+            </td>
+            <td>
+              <label for="lap2">Lap 2</label>
+            </td>
+            <td>
+              <label for="lap3">Lap 3</label>
+            </td>
+            <td>
+              <label for="total-time">Total Time</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input id="your-name" type="text" name="yourName" />
+            </td>
+            <td>
+              <!-- This is just a placeholder until we create the database which will draw this information -->
+              <select name="map" id="map">
+                <option value="Mushroom Gorge">Mushroom Gorge</option>
+              </select>
+            </td>
+            <!-- Need to update data types to time once i can figure out how to get mm:ss:sss and fix up the function -->
+            <td>
+              <input
+                id="lap1"
+                type="text"
+                name="Time"
+                onblur="findTotal()"
+                class="lapTime" />
+            </td>
+            <td>
+              <input
+                id="lap2"
+                type="text"
+                name="Time"
+                onblur="findTotal()"
+                class="lapTime" />
+            </td>
+            <td>
+              <input
+                id="lap3"
+                type="text"
+                name="Time"
+                onblur="findTotal()"
+                class="lapTime" />
+            </td>
+            <td>
+              <input id="total-time" type="text" id="total" readonly />
+            </td>
+          </tr>
+        </table>
+        <input class="btn" type="submit" />
+      </form>
+    </section>
+    <main class="current-leaderboard">
       <h2>Leaderboard</h2>
-    </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-  <script src="index.js"></script>
-</body>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
