@@ -1,3 +1,12 @@
+/* Google Fonts */
+
+
+/* Base HTML Styles */
+
+:root {
+  --black: #111111;
+  --gray: #c3c3c3;
+}
 /* CSS Reset */
 
 html {
@@ -31,7 +40,7 @@ input, button, textarea, select {
 
 /* Global Styles */
 body {
-  background-color: #151515;
+  background-color: var(--black);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   text-align: center;
@@ -44,11 +53,16 @@ body {
 /* Header */
 
 /* Carousel */
+.slick-arrow {
+  background-color: var(--black);
+  color: white;
+  border-style: none;
+}
 
 /* Entry Form */
 .new-entry {
   background-color: #ffffff;
-  color: #151515;
+  color: var(--black);
   padding: 50px;
 }
 .new-entry form {
@@ -66,7 +80,7 @@ body {
  /* LeaderBoard */
 .current-leaderboard {
   background-color: #ffffff;
-  color: #151515;
+  color: #1515 15;
   /* padding: 50px; */
   width: 100%;
 }
