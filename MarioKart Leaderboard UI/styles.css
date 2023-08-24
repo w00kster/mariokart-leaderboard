@@ -20,7 +20,7 @@ html {
 /* *, *:before, *:after {
   box-sizing: inherit;
 } */
- h1, h2, h3, h4, h5, h6, p, ol, ul {
+h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
 }
@@ -53,10 +53,27 @@ body {
 /* Header */
 
 /* Carousel */
-.slick-arrow {
-  background-color: var(--black);
-  color: white;
-  border-style: none;
+.carousel {
+  padding: 50px;
+}
+.control-c {
+  width: 30px;
+  height: 30px;
+}
+
+.next{
+  position: absolute;
+  z-index: 1000;
+  top: 40%;
+  right: 0;
+  margin-right: 24px;
+}
+.prev{
+  position: absolute;
+  z-index: 1000;
+  top: 40%;
+  left: 0;
+  margin-left: 24px;
 }
 
 /* Entry Form */
@@ -74,13 +91,13 @@ body {
   max-width: 100vw;
 }
 
- .column {
+.column {
   flex: 1;
 }
  /* LeaderBoard */
 .current-leaderboard {
   background-color: #ffffff;
-  color: #1515 15;
+  color: var(--black);
   /* padding: 50px; */
   width: 100%;
 }
