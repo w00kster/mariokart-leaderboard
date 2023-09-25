@@ -120,14 +120,21 @@ To get a local copy up and running follow these simple example steps. -->
 
         git clone https://github.com/w00kster/mariokart-leaderboard.git
 - Once you have a local version of this repository, you'll need to set up your local development environment:
-    - In the command line run the below command to Download the MySQL image:
+    - If this is the first time setting up or you are setting up on a new computer:
+         - In the command line run the below command to Download the MySQL image:
               
-              docker pull mysql
-    - To start the MySQL instance run the below command (ensuring to update the name and secret password ): 
+                 docker pull mysql:8.0.26
+        - To start the MySQL instance run the below command (ensuring to update the secret password): 
             
-            docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0.26
+                docker run -p 33306:3306 --name mariokart-leaderboard -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0.26
 
-            
+            You can choose a port other than 33306 to bind it to. If you leave it as simply 3306, a random port will be bound on your local machine.
+    - To execute commands in an interactive session inside the container
+              
+                docker exec -it mariokart-leaderboard /bin/sh
+    - To connect to the MySQL client from within the interactive session:
+              
+                mysql -u root -p
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
