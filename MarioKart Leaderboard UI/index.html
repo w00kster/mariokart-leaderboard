@@ -1,55 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mario Kart Leaderboard</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="top-container">
-    <h1>Mario Kart Leaderboard</h1>
-  </div>
-<div class="row">
-  <div class="new-entry col-lg-6">
-    <h2>Add New Record</h2>
-    <table cellspacing="10">
-      <form action="" method="post">
-      <tr>
-        <td>
-          <label>Your Name</label>
-        </td>
-        <td>
-          <label>Map</label>
-        </td>
-        <td>
-          <label>Time</label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <input type="text" name="yourName">
-        </td>
-        <td>
-          <!-- This is just a placeholder until we create the database which will draw this information -->
-          <input list="maps" name="Map">
-          <datalist  id="maps">
-            <option value="Mushroom Gorge"></option> 
-        </td>
-        <td>
-          <input type="text" name="Time">
-        </td>
-      </tr>
-    </table>
-    <input class="btn" type="submit">
-  </form>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mario Kart Leaderboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
 
-    <div class="current-leaderboard col-lg-6">
+  </head>
+  <body>
+    <header class="top-container">
+      <h1>Mario Kart Leaderboard</h1>
+    </header>
+    <section class="carousel">
+
+
+      <div><h3>1</h3></div>
+      <div><h3>2</h3></div>
+      <div><h3>3</h3></div>
+      <div><h3>4</h3></div>
+      <div><h3>5</h3></div>
+      <div><h3>6</h3></div>
+
+    </section>
+    <section class="new-entry">
+      <h2>Add New Record</h2>
+      <form action="connect.js" method="post">
+        <span class="row">
+              <label for="your-name" class="column">Your Name</label>
+
+              <label for="map" class="column">Map</label>
+
+              <label for="lap1" class="column">Lap 1</label>
+
+              <label for="lap2" class="column">Lap 2</label>
+
+              <label for="lap3" class="column">Lap 3</label>
+
+              <label for="total-time" class="column">Total Time</label>
+            </span>
+            <span class="row">
+              <input id="your-name" type="text" name="yourName" class="column" />
+              <!-- This is just a placeholder until we create the database which will draw this information -->
+              <select name="map" id="map" class="column">
+                <option value="Mushroom Gorge">Mushroom Gorge</option>
+              </select>
+            <!-- Need to update data types to time once i can figure out how to get mm:ss:sss and fix up the function -->
+              <input
+                id="lap1"
+                type="text"
+                name="Time"
+                onblur="findTotal()"
+                class="lapTime column" />
+              <input
+                id="lap2"
+                type="text"
+                name="Time"
+                onblur="findTotal()"
+                class="lapTime column" />
+              <input
+                id="lap3"
+                type="text"
+                name="Time"
+                onblur="findTotal()"
+                class="lapTime column" />
+              <input class="column" type="text" id="total" readonly />
+            </span>
+        <input class="btn" type="submit" />
+      </form>
+    </section>
+    <main class="current-leaderboard">
       <h2>Leaderboard</h2>
-    </div>
-  </div>
-  <script src="index.js"></script>
-</body>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
