@@ -126,7 +126,7 @@ To get a local copy up and running follow these simple example steps. -->
                  docker pull mysql:8.0.26
         - To start the MySQL instance run the below command (ensuring to update the secret password): 
             
-                docker run -p 33306:3306 --name mariokart-leaderboard -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0.26
+                docker run -p 33306:3306 --name mariokart-leaderboard -e MYSQL_ROOT_PASSWORD=my-secret-pw -e MYSQL_DATABASE=mariokart_leaderboard -d mysql:8.0.26
 
             You can choose a port other than 33306 to bind it to. If you leave it as simply 3306, a random port will be bound on your local machine.
     - To execute commands in an interactive session inside the container

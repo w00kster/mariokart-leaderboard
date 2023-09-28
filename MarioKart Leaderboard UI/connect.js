@@ -1,13 +1,13 @@
 const mysql = require('mysql2');
 const dotenv = require('dotenv').config();
-
+const isLocal = true;
 const connection = mysql.createConnection({
-  host: process.env.host,
-  user: process.env.user,
-  password: process.env.password,
+  host: isLocal ? process.env.localhost : process.env.host,
+  user: isLocal ? process.env.localuser: process.env.user,
+  password: isLocal ? process.env.localpassword : process.env.password,
   database: process.env.database,
   ssl: {
-    ca: process.env.ssl,
+    ca: isLocal ? "" : process.env.ssl,
     rejectUnauthorized: false
   }
 });
